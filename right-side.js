@@ -7,14 +7,14 @@
  *
  * */
 
-$(".delete-icon").click(function () {
-    $(this.parentNode).slideUp();
+$(document).on("click", ".delete-icon", function () {
+    $(this.parentNode).hide(300);
 });
 /*
  * See more a quote
  *
  * */
-$(".quote-see-more").click(function () {
+$(document).on("click", ".quote-see-more", function () {
     $(this).siblings(".quote-content").toggleClass("quote-content-full quote-content-short");
     $(this).parent().toggleClass("box-full");
     $(this).toggleClass("short-quote");
@@ -41,15 +41,11 @@ window.onresize = resizeRightSide;
     rightSide close
 */
 
-function slideRightSide() {
-    var rightSide = $("#right-side");
-    if (rightSide.hasClass("open")) {
-        rightSide.animate({right:'-375px'}, {queue: false, duration: 700});
-    } else rightSide.animate({right:'0px'}, {queue: false, duration: 700});
-    rightSide.toggleClass("open");
-}
 $("#right-side-close").click(function () {
-    slideRightSide();
+
+    if (rightSide.hasClass("open")) {
+        rightSide.animate({right:'-375px'}, 600, function () { rightSide.removeClass("open"); });
+    } else rightSide.animate({right:'0px'}, 600, function () { rightSide.addClass("open"); });
 });
 
 $("#tooltip-switch button").click(function () {

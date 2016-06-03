@@ -102,10 +102,6 @@ body {
     margin-bottom: 10px;
 }
 
-#right-side-body {
-    width: 370px;
-}
-
 .tab-content {
     min-height: 340px;
     overflow: auto;
