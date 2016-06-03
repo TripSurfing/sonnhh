@@ -1,20 +1,20 @@
 /**
  * Created by Nguyễn Hữu Hoàng Sơn on 5/20/2016.
  */
-
+var rightSide = $("#right-side");
 /*
  * Delete a box
  *
  * */
 
-$(document).on("click", ".delete-icon", function () {
+rightSide.on("click", ".delete-icon", function () {
     $(this.parentNode).hide(300);
 });
 /*
  * See more a quote
  *
  * */
-$(document).on("click", ".quote-see-more", function () {
+rightSide.on("click", ".quote-see-more", function () {
     $(this).siblings(".quote-content").toggleClass("quote-content-full quote-content-short");
     $(this).parent().toggleClass("box-full");
     $(this).toggleClass("short-quote");
@@ -26,12 +26,12 @@ $(document).on("click", ".quote-see-more", function () {
  * resize right-side
  * 
  * */
-var rightSide = document.getElementById("right-side");
+var rightSideDOM = document.getElementById("right-side");
 var tabContent = document.getElementById("tab-content-id");
 
 function resizeRightSide() {
     var windowHeight = window.innerHeight;
-    rightSide.style.height = windowHeight.toString() + "px";
+    rightSideDOM.style.height = windowHeight.toString() + "px";
     tabContent.style.height = (windowHeight - 240).toString() + "px";
 
 }
@@ -42,7 +42,6 @@ window.onresize = resizeRightSide;
 */
 
 $("#right-side-close").click(function () {
-    var rightSide = $("#right-side");
     if (rightSide.hasClass("open")) {
         rightSide.animate({right:'-375px'}, 600, function () { rightSide.removeClass("open"); });
     } else rightSide.animate({right:'0px'}, 600, function () { rightSide.addClass("open"); });
