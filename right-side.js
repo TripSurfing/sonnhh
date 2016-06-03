@@ -42,7 +42,7 @@ window.onresize = resizeRightSide;
 */
 
 $("#right-side-close").click(function () {
-
+    var rightSide = $("#right-side");
     if (rightSide.hasClass("open")) {
         rightSide.animate({right:'-375px'}, 600, function () { rightSide.removeClass("open"); });
     } else rightSide.animate({right:'0px'}, 600, function () { rightSide.addClass("open"); });
