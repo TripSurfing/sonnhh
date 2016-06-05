@@ -12,15 +12,17 @@ rightSide.on("click", ".delete-icon", function() {
     var boxParent = $(this).parents('div.box');
     boxParent.children('div.box-container').addClass('box-blur');
     boxParent.prepend(
-        '<div class="test">'+
-            '<p>Are you sure?</p>'+
-            '<button type="button" class="btn btn-warning btn-confirm-delete">Yes</button>'+
-            '<button type="button" class="btn btn-default btn-confirm-cancel">No</button>' +
+        '<div class="box-confirm">'+
+            '<div class="box-confirm-content">' +
+                '<p>Are you sure?</p>'+
+                '<button type="button" class="btn btn-warning btn-confirm-delete">Yes</button>'+
+                '<button type="button" class="btn btn-default btn-confirm-cancel">No</button>' +
+            '</div>'+
         '</div>');
 
 });
 rightSide.on('click', '.btn-confirm-cancel', function() {
-    var parent = $(this).parents('div.test');
+    var parent = $(this).parents('div.box-confirm');
     parent.siblings('.box-container').removeClass('box-blur');
     parent.remove();
 
@@ -40,7 +42,7 @@ rightSide.on('click', '.btn-confirm-delete', function(){
  */
 rightSide.on("click", ".quote-see-more", function() {
     $(this).siblings(".quote-content").toggleClass("quote-content-full quote-content-short");
-    $(this).parent().toggleClass("box-full");
+    $(this).parents('div.box').toggleClass("box-full");
     $(this).toggleClass("short-quote");
 
     if ($(this).hasClass("short-quote")) $(this).text("See more");
