@@ -1,3 +1,30 @@
+.btn-confirm-delete {
+    position: absolute;
+    bottom: 5px;
+    right: 30%;
+    z-index:2;
+}
+.btn-confirm-cancel {
+    position: absolute;
+    bottom: 5px;
+    left: 30%;
+    z-index:2;
+}
+
+.test {
+    height: 100px;
+    width: 345px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    position: absolute;
+}
+.test p {
+    margin-top: 15px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
 .delete-icon {
     position: absolute;
     right: 5px;
@@ -13,12 +40,14 @@
 * Media bootstrap
 *
 */
-
 #saved-places-id {
     overflow: auto;
     padding: 0;
 }
-
+.box-blur {
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+}
 .box {
     position: relative;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
@@ -266,14 +295,6 @@ a.box-title:hover {
 .box-body {
     width: 230px;
 }
-
-
-/*.box {
-    -webkit-animation-duration: 400ms;
-    -webkit-animation-delay: 0ms;
-    -webkit-animation-iteration-count: 1;
-}*/
-
 
 /*::-webkit-scrollbar*/
 

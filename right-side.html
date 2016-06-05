@@ -3,382 +3,319 @@
 
 <head>
     <meta charset="UTF-8">
-
     <link rel="stylesheet" type="text/css" href="lib/bootstrap%203.3.6/css/bootstrap.min.css">
     <!--<script src="bower_components/jquery/dist/jquery.min.map"></script>-->
-
-
-
     <!-- Latest compiled and minified CSS -->
     <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
-
     <!-- jQuery library -->
     <script src="lib/jquery/jquery-1.12.4.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
     <script src="lib/bootstrap%203.3.6/js/bootstrap.min.js"></script>
-
     <!--<link rel="stylesheet" type="text/css" href="animate.css">-->
     <link rel="stylesheet" type="text/css" href="right-side.css">
     <title>right side</title>
 </head>
 
 <body>
-
-<button id="right-side-close" class="btn btn-danger btn-xs">click me to close</button>
-
-<div id="right-side" class="open">
-    <script>
-        document.getElementById("right-side").style.height = window.innerHeight.toString() + "px";
-    </script>
-    <div id="right-side-header">
-        <span id="right-side-close-window" class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-        <img id="right-side-header-logo" src="image/LogoTruenogapv.png" alt="logo">
-        <div id="right-side-header-intro">Link Saved</div>
-
-        <div id="div-trip-select">
-            <label>
-                <select name="cars" id="selection-trip">
-                    <option value="israel">Israel</option>
-                    <option value="singapore">Singapore</option>
-                    <option value="italy">Italy</option>
-                    <option value="japan">Japan</option>
-                </select>
-            </label>
-
-            <button id="open-button" class="btn btn-sm btn-primary">Open</button>
-        </div>
-
-    </div>
-    <div id="right-side-body">
-        <ul class="nav nav-tabs nav-justified">
-            <li class="active"><a data-toggle="tab" href="#saved-places-id">Places</a></li>
-            <li><a data-toggle="tab" href="#saved-quote-id">Quotes</a></li>
-            <li><a data-toggle="tab" href="#saved-links-id">Links</a></li>
-        </ul>
-    </div>
-
-    <div class="tab-content" id="tab-content-id">
-
+    <button id="right-side-close" class="btn btn-danger btn-xs">click me to close</button>
+    <div id="right-side" class="open">
         <script>
-            document.getElementById("tab-content-id").style.height = (window.innerHeight - 240).toString() + "px";
+        document.getElementById("right-side").style.height = window.innerHeight.toString() + "px";
         </script>
-
-        <div id="saved-places-id" class="tab-pane fade in active">
-            <div class="media box">
-                <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
-
-                <div class="media-left box-avatar-left">
-                    <a href="#">
-                        <img class="media-object thumbnail saved-places-image" src="image/69TMH4ITIE.jpg" alt="image">
-                    </a>
-                </div>
-
-                <div class="media-body box-body">
-                    <a href="#" class="box-title">
-                        <h4 class="media-heading title-wrap saved-place-title">
-                            Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem The end
-                        </h4>
-                    </a>
-
-                    <div class="box-body-content saved-places-content">
-                        Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share
-                        their zeal in order to appreciate
-                        this city’s profound cultural and historical significance. Plan on seeing the major sights, but
-                        also leave plenty of time to walk through the streets and simply immerse yourself in the daily
-                        life of such an ancient and revered place.
-                    </div>
-                </div>
-
-            </div>
-            <div class="media box">
-                <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
-
-                <div class="media-left box-avatar-left">
-                    <a href="#">
-                        <img class="media-object thumbnail saved-places-image" src="image/69TMH4ITIE.jpg" alt="image">
-                    </a>
-                </div>
-
-                <div class="media-body box-body">
-                    <a href="#" class="box-title">
-                        <h4 class="media-heading title-wrap saved-place-title">
-                            Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem The end
-                        </h4>
-                    </a>
-
-                    <div class="box-body-content saved-places-content">
-                        Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share
-                        their zeal in order to appreciate
-                        this city’s profound cultural and historical significance. Plan on seeing the major sights, but
-                        also leave plenty of time to walk through the streets and simply immerse yourself in the daily
-                        life of such an ancient and revered place.
-                    </div>
-                </div>
-
-            </div>
-            <div class="media box">
-                <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
-
-                <div class="media-left box-avatar-left">
-                    <a href="#">
-                        <img class="media-object thumbnail saved-places-image" src="image/69TMH4ITIE.jpg" alt="image">
-                    </a>
-                </div>
-
-                <div class="media-body box-body">
-                    <a href="#" class="box-title">
-                        <h4 class="media-heading title-wrap saved-place-title">
-                            Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem The end
-                        </h4>
-                    </a>
-
-                    <div class="box-body-content saved-places-content">
-                        Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share
-                        their zeal in order to appreciate
-                        this city’s profound cultural and historical significance. Plan on seeing the major sights, but
-                        also leave plenty of time to walk through the streets and simply immerse yourself in the daily
-                        life of such an ancient and revered place.
-                    </div>
-                </div>
-
-            </div>
-            <div class="media box">
-                <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
-
-                <div class="media-left box-avatar-left">
-                    <a href="#">
-                        <img class="media-object thumbnail saved-places-image" src="image/69TMH4ITIE.jpg" alt="image">
-                    </a>
-                </div>
-
-                <div class="media-body box-body">
-                    <a href="#" class="box-title">
-                        <h4 class="media-heading title-wrap saved-place-title">
-                            Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem The end
-                        </h4>
-                    </a>
-
-                    <div class="box-body-content saved-places-content">
-                        Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share
-                        their zeal in order to appreciate
-                        this city’s profound cultural and historical significance. Plan on seeing the major sights, but
-                        also leave plenty of time to walk through the streets and simply immerse yourself in the daily
-                        life of such an ancient and revered place.
-                    </div>
-                </div>
-
+        <div id="right-side-header">
+            <span id="right-side-close-window" class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+            <img id="right-side-header-logo" src="image/LogoTruenogapv.png" alt="logo">
+            <div id="right-side-header-intro">Link Saved</div>
+            <div id="div-trip-select">
+                <label>
+                    <select name="cars" id="selection-trip">
+                        <option value="israel">Israel</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="italy">Italy</option>
+                        <option value="japan">Japan</option>
+                    </select>
+                </label>
+                <button id="open-button" class="btn btn-sm btn-primary">Open</button>
             </div>
         </div>
-
-        <div id="saved-quote-id" class="tab-pane fade">
-            <div class="quote box">
-                <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
-                <p class="quote-content quote-content-short">
-                    Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their
-                    zeal in order to appreciate
-                    this city’s profound cultural and historical significance. Plan on seeing the major sights, but also
-                    leave plenty of time to walk through the streets and simply immerse yourself in the daily life of
-                    such an ancient and revered place.
-                </p>
-                <a class="quote-footer" href="#">
-                    Source: www.tripsurfing.co/...
-                </a>
-                <a class="quote-see-more short-quote" href="#">
-                    See more
-                </a>
-            </div>
-            <div class="quote box">
-                <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
-                <p class="quote-content quote-content-short">
-                    Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their
-                    zeal in order to appreciate
-                    this city’s profound cultural and historical significance. Plan on seeing the major sights, but also
-                    leave plenty of time to walk through the streets and simply immerse yourself in the daily life of
-                    such an ancient and revered place.
-                </p>
-                <a class="quote-footer" href="#">
-                    Source: www.tripsurfing.co/...
-                </a>
-                <a class="quote-see-more short-quote" href="#">
-                    See more
-                </a>
-            </div>
-            <div class="quote box">
-                <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
-                <p class="quote-content quote-content-short">
-                    Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their
-                    zeal in order to appreciate
-                    this city’s profound cultural and historical significance. Plan on seeing the major sights, but also
-                    leave plenty of time to walk through the streets and simply immerse yourself in the daily life of
-                    such an ancient and revered place.
-                </p>
-                <a class="quote-footer" href="#">
-                    Source: www.tripsurfing.co/...
-                </a>
-                <a class="quote-see-more short-quote" href="#">
-                    See more
-                </a>
-            </div>
-            <div class="quote box">
-                <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
-                <p class="quote-content quote-content-short">
-                    Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their
-                    zeal in order to appreciate
-                    this city’s profound cultural and historical significance. Plan on seeing the major sights, but also
-                    leave plenty of time to walk through the streets and simply immerse yourself in the daily life of
-                    such an ancient and revered place.
-                </p>
-                <a class="quote-footer" href="#">
-                    Source: www.tripsurfing.co/...
-                </a>
-                <a class="quote-see-more short-quote" href="#">
-                    See more
-                </a>
-            </div>
-
+        <div id="right-side-body">
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a data-toggle="tab" href="#saved-places-id">Places</a></li>
+                <li><a data-toggle="tab" href="#saved-quote-id">Quotes</a></li>
+                <li><a data-toggle="tab" href="#saved-links-id">Links</a></li>
+            </ul>
         </div>
-
-
-        <div id="saved-links-id" class="tab-pane fade">
-            <div class="media box">
-                <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
-                <div class="media-left box-avatar-left">
-                    <a href="#">
-                        <img class="media-object thumbnail saved-link-image" src="image/69TMH4ITIE.jpg" alt="image">
-                    </a>
-                </div>
-
-                <div class="media-body box-body">
-                    <a href="#" class="box-title">
-                        <h4 class="media-heading title-wrap saved-link-title">
+        <div class="tab-content" id="tab-content-id">
+            <script>
+            document.getElementById("tab-content-id").style.height = (window.innerHeight - 240).toString() + "px";
+            </script>
+            <div id="saved-places-id" class="tab-pane fade in active">
+                <div class="media box">
+                    <div class="box-container">
+                        <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
+                        <div class="media-left box-avatar-left">
+                            <a href="#">
+                                <img class="media-object thumbnail saved-places-image" src="image/69TMH4ITIE.jpg" alt="image">
+                            </a>
+                        </div>
+                        <div class="media-body box-body">
+                            <a href="#" class="box-title">
+                                <h4 class="media-heading title-wrap saved-place-title">
                             Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem The end
                         </h4>
-                    </a>
-
-                    <div class="box-body-content saved-link-desc">
-                        Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share
-                        their zeal in order to appreciate
-                        this city’s profound cultural and historical significance. Plan on seeing the major sights, but
-                        also leave plenty of time to walk through the streets and simply immerse yourself in the daily
-                        life of such an ancient and revered place.
+                            </a>
+                            <div class="box-body-content saved-places-content">
+                                Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their zeal in order to appreciate this city’s profound cultural and historical significance. Plan on seeing the major sights, but also leave plenty of time to walk through the streets and simply immerse yourself in the daily life of such an ancient and revered place.
+                            </div>
+                        </div>
                     </div>
-
-                    <a class="saved-link-footer">
-                        Source: www.tripsurfing.co/...
-                    </a>
                 </div>
-
-
+                <div class="media box">
+                    <div class="box-container">
+                        <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
+                        <div class="media-left box-avatar-left">
+                            <a href="#">
+                                <img class="media-object thumbnail saved-places-image" src="image/69TMH4ITIE.jpg" alt="image">
+                            </a>
+                        </div>
+                        <div class="media-body box-body">
+                            <a href="#" class="box-title">
+                                <h4 class="media-heading title-wrap saved-place-title">
+                            Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem The end
+                        </h4>
+                            </a>
+                            <div class="box-body-content saved-places-content">
+                                Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their zeal in order to appreciate this city’s profound cultural and historical significance. Plan on seeing the major sights, but also leave plenty of time to walk through the streets and simply immerse yourself in the daily life of such an ancient and revered place.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media box">
+                    <div class="box-container">
+                        <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
+                        <div class="media-left box-avatar-left">
+                            <a href="#">
+                                <img class="media-object thumbnail saved-places-image" src="image/69TMH4ITIE.jpg" alt="image">
+                            </a>
+                        </div>
+                        <div class="media-body box-body">
+                            <a href="#" class="box-title">
+                                <h4 class="media-heading title-wrap saved-place-title">
+                            Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem The end
+                        </h4>
+                            </a>
+                            <div class="box-body-content saved-places-content">
+                                Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their zeal in order to appreciate this city’s profound cultural and historical significance. Plan on seeing the major sights, but also leave plenty of time to walk through the streets and simply immerse yourself in the daily life of such an ancient and revered place.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media box">
+                    <div class="box-container">
+                        <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
+                        <div class="media-left box-avatar-left">
+                            <a href="#">
+                                <img class="media-object thumbnail saved-places-image" src="image/69TMH4ITIE.jpg" alt="image">
+                            </a>
+                        </div>
+                        <div class="media-body box-body">
+                            <a href="#" class="box-title">
+                                <h4 class="media-heading title-wrap saved-place-title">
+                            Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem The end
+                        </h4>
+                            </a>
+                            <div class="box-body-content saved-places-content">
+                                Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their zeal in order to appreciate this city’s profound cultural and historical significance. Plan on seeing the major sights, but also leave plenty of time to walk through the streets and simply immerse yourself in the daily life of such an ancient and revered place.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="media box">
-                <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
-                <div class="media-left box-avatar-left">
-                    <a href="#">
-                        <img class="media-object thumbnail saved-link-image" src="image/69TMH4ITIE.jpg" alt="image">
-                    </a>
-                </div>
-
-                <div class="media-body box-body">
-                    <a href="#" class="box-title">
-                        <h4 class="media-heading title-wrap saved-link-title">
-                            Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem The end
-                        </h4>
-                    </a>
-
-                    <div class="box-body-content saved-link-desc">
-                        Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share
-                        their zeal in order to appreciate
-                        this city’s profound cultural and historical significance. Plan on seeing the major sights, but
-                        also leave plenty of time to walk through the streets and simply immerse yourself in the daily
-                        life of such an ancient and revered place.
-                    </div>
-
-                    <a class="saved-link-footer">
+            <div id="saved-quote-id" class="tab-pane fade">
+                <div class="quote box">
+                    <div class="box-container">
+                        <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
+                    <p class="quote-content quote-content-short">
+                        Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their zeal in order to appreciate this city’s profound cultural and historical significance. Plan on seeing the major sights, but also leave plenty of time to walk through the streets and simply immerse yourself in the daily life of such an ancient and revered place.
+                    </p>
+                    <a class="quote-footer" href="#">
                         Source: www.tripsurfing.co/...
                     </a>
+                    <a class="quote-see-more short-quote" href="#">
+                        See more
+                    </a>
+                    </div>
+                    
                 </div>
-
-
+                <div class="quote box">
+                    <div class="box-container">
+                        <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
+                    <p class="quote-content quote-content-short">
+                        Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their zeal in order to appreciate this city’s profound cultural and historical significance. Plan on seeing the major sights, but also leave plenty of time to walk through the streets and simply immerse yourself in the daily life of such an ancient and revered place.
+                    </p>
+                    <a class="quote-footer" href="#">
+                        Source: www.tripsurfing.co/...
+                    </a>
+                    <a class="quote-see-more short-quote" href="#">
+                        See more
+                    </a>
+                    </div>
+                    
+                </div>
+                <div class="quote box">
+                    <div class="box-container">
+                        <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
+                    <p class="quote-content quote-content-short">
+                        Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their zeal in order to appreciate this city’s profound cultural and historical significance. Plan on seeing the major sights, but also leave plenty of time to walk through the streets and simply immerse yourself in the daily life of such an ancient and revered place.
+                    </p>
+                    <a class="quote-footer" href="#">
+                        Source: www.tripsurfing.co/...
+                    </a>
+                    <a class="quote-see-more short-quote" href="#">
+                        See more
+                    </a>
+                    </div>
+                    
+                </div>
+                <div class="quote box">
+                    <div class="box-container">
+                        <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
+                    <p class="quote-content quote-content-short">
+                        Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their zeal in order to appreciate this city’s profound cultural and historical significance. Plan on seeing the major sights, but also leave plenty of time to walk through the streets and simply immerse yourself in the daily life of such an ancient and revered place.
+                    </p>
+                    <a class="quote-footer" href="#">
+                        Source: www.tripsurfing.co/...
+                    </a>
+                    <a class="quote-see-more short-quote" href="#">
+                        See more
+                    </a>
+                    </div>
+                    
+                </div>
+                <div class="quote box">
+                    <div class="box-container">
+                        <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
+                    <p class="quote-content quote-content-short">
+                        Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their zeal in order to appreciate this city’s profound cultural and historical significance. Plan on seeing the major sights, but also leave plenty of time to walk through the streets and simply immerse yourself in the daily life of such an ancient and revered place.
+                    </p>
+                    <a class="quote-footer" href="#">
+                        Source: www.tripsurfing.co/...
+                    </a>
+                    <a class="quote-see-more short-quote" href="#">
+                        See more
+                    </a>
+                    </div>
+                    
+                </div>
             </div>
-            <div class="media box">
-                <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
-                <div class="media-left box-avatar-left">
-                    <a href="#">
-                        <img class="media-object thumbnail saved-link-image" src="image/69TMH4ITIE.jpg" alt="image">
-                    </a>
-                </div>
-
-                <div class="media-body box-body">
-                    <a href="#" class="box-title">
-                        <h4 class="media-heading title-wrap saved-link-title">
+            <div id="saved-links-id" class="tab-pane fade">
+                <div class="media box">
+                    <div class="box-container">
+                        <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
+                    <div class="media-left box-avatar-left">
+                        <a href="#">
+                            <img class="media-object thumbnail saved-link-image" src="image/69TMH4ITIE.jpg" alt="image">
+                        </a>
+                    </div>
+                    <div class="media-body box-body">
+                        <a href="#" class="box-title">
+                            <h4 class="media-heading title-wrap saved-link-title">
                             Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem The end
                         </h4>
-                    </a>
-
-                    <div class="box-body-content saved-link-desc">
-                        Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share
-                        their zeal in order to appreciate
-                        this city’s profound cultural and historical significance. Plan on seeing the major sights, but
-                        also leave plenty of time to walk through the streets and simply immerse yourself in the daily
-                        life of such an ancient and revered place.
-                    </div>
-
-                    <a class="saved-link-footer">
+                        </a>
+                        <div class="box-body-content saved-link-desc">
+                            Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their zeal in order to appreciate this city’s profound cultural and historical significance. Plan on seeing the major sights, but also leave plenty of time to walk through the streets and simply immerse yourself in the daily life of such an ancient and revered place.
+                        </div>
+                        <a class="saved-link-footer">
                         Source: www.tripsurfing.co/...
                     </a>
+                    </div>
+                    </div>
                 </div>
-
-
+                <div class="media box">
+                    <div class="box-container">
+                        <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
+                    <div class="media-left box-avatar-left">
+                        <a href="#">
+                            <img class="media-object thumbnail saved-link-image" src="image/69TMH4ITIE.jpg" alt="image">
+                        </a>
+                    </div>
+                    <div class="media-body box-body">
+                        <a href="#" class="box-title">
+                            <h4 class="media-heading title-wrap saved-link-title">
+                            Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem The end
+                        </h4>
+                        </a>
+                        <div class="box-body-content saved-link-desc">
+                            Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their zeal in order to appreciate this city’s profound cultural and historical significance. Plan on seeing the major sights, but also leave plenty of time to walk through the streets and simply immerse yourself in the daily life of such an ancient and revered place.
+                        </div>
+                        <a class="saved-link-footer">
+                        Source: www.tripsurfing.co/...
+                    </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="media box">
+                    <div class="box-container">
+                        <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
+                    <div class="media-left box-avatar-left">
+                        <a href="#">
+                            <img class="media-object thumbnail saved-link-image" src="image/69TMH4ITIE.jpg" alt="image">
+                        </a>
+                    </div>
+                    <div class="media-body box-body">
+                        <a href="#" class="box-title">
+                            <h4 class="media-heading title-wrap saved-link-title">
+                            Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem The end
+                        </h4>
+                        </a>
+                        <div class="box-body-content saved-link-desc">
+                            Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their zeal in order to appreciate this city’s profound cultural and historical significance. Plan on seeing the major sights, but also leave plenty of time to walk through the streets and simply immerse yourself in the daily life of such an ancient and revered place.
+                        </div>
+                        <a class="saved-link-footer">
+                        Source: www.tripsurfing.co/...
+                    </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="media box">
+                    <div class="box-container">
+                        <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
+                    <div class="media-left box-avatar-left">
+                        <a href="#">
+                            <img class="media-object thumbnail saved-link-image" src="image/69TMH4ITIE.jpg" alt="image">
+                        </a>
+                    </div>
+                    <div class="media-body box-body">
+                        <a href="#" class="box-title">
+                            <h4 class="media-heading title-wrap saved-link-title">
+                            Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem The end
+                        </h4>
+                        </a>
+                        <div class="box-body-content saved-link-desc">
+                            Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share their zeal in order to appreciate this city’s profound cultural and historical significance. Plan on seeing the major sights, but also leave plenty of time to walk through the streets and simply immerse yourself in the daily life of such an ancient and revered place.
+                        </div>
+                        <a class="saved-link-footer">
+                        Source: www.tripsurfing.co/...
+                    </a>
+                    </div>
+                    </div>
+                </div>
+          
             </div>
-            <div class="media box">
-                <span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
-                <div class="media-left box-avatar-left">
-                    <a href="#">
-                        <img class="media-object thumbnail saved-link-image" src="image/69TMH4ITIE.jpg" alt="image">
-                    </a>
+        </div>
+        <div id="right-side-footer">
+            <div id="tooltip-switch">
+                <span>Tooltip: </span>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default tooltip-on">ON</button>
+                    <button type="button" class="btn btn-warning tooltip-off">OFF</button>
                 </div>
-
-                <div class="media-body box-body">
-                    <a href="#" class="box-title">
-                        <h4 class="media-heading title-wrap saved-link-title">
-                            Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem Jerusalem The end
-                        </h4>
-                    </a>
-
-                    <div class="box-body-content saved-link-desc">
-                        Religious pilgrims have been traveling to Jerusalem for centuries, yet you don’t have to share
-                        their zeal in order to appreciate
-                        this city’s profound cultural and historical significance. Plan on seeing the major sights, but
-                        also leave plenty of time to walk through the streets and simply immerse yourself in the daily
-                        life of such an ancient and revered place.
-                    </div>
-
-                    <a class="saved-link-footer">
-                        Source: www.tripsurfing.co/...
-                    </a>
-                </div>
-
-
             </div>
         </div>
     </div>
-    <div id="right-side-footer">
-        <div id="tooltip-switch">
-            <span>Tooltip: </span>
-            <div class="btn-group">
-                <button type="button" class="btn btn-default tooltip-on">ON</button>
-                <button type="button" class="btn btn-warning tooltip-off">OFF</button>
-            </div>
-        </div>
-
-    </div>
-
-</div>
 </body>
-
-
 <script src="right-side.js"></script>
 
 </html>

@@ -5,27 +5,52 @@ var rightSide = $("#right-side");
 /*
  * Delete a box
  *
- * */
+ * 
+ */
 
-rightSide.on("click", ".delete-icon", function () {
-    $(this.parentNode).hide(300);
+rightSide.on("click", ".delete-icon", function() {
+    var boxParent = $(this).parents('div.box');
+    boxParent.children('div.box-container').addClass('box-blur');
+    boxParent.prepend(
+        '<div class="test">'+
+            '<p>Are you sure?</p>'+
+            '<button type="button" class="btn btn-warning btn-confirm-delete">Yes</button>'+
+            '<button type="button" class="btn btn-default btn-confirm-cancel">No</button>' +
+        '</div>');
+
+});
+rightSide.on('click', '.btn-confirm-cancel', function() {
+    var parent = $(this).parents('div.test');
+    parent.siblings('.box-container').removeClass('box-blur');
+    parent.remove();
+
+});
+rightSide.on('click', '.btn-confirm-delete', function(){
+    var boxParent = $(this).parents('div.box');
+    boxParent.hide(300, function(){
+        // Sau này muốn thêm chức năng undo, bỏ dòng này đi
+        boxParent.remove();
+    });
+    /*Do something to server here*/
 });
 /*
  * See more a quote
  *
- * */
-rightSide.on("click", ".quote-see-more", function () {
+ * 
+ */
+rightSide.on("click", ".quote-see-more", function() {
     $(this).siblings(".quote-content").toggleClass("quote-content-full quote-content-short");
     $(this).parent().toggleClass("box-full");
     $(this).toggleClass("short-quote");
 
-    if($(this).hasClass("short-quote")) $(this).text("See more");
+    if ($(this).hasClass("short-quote")) $(this).text("See more");
     else $(this).text("See less");
 });
 /*
  * resize right-side
  * 
- * */
+ * 
+ */
 var rightSideDOM = document.getElementById("right-side");
 var tabContent = document.getElementById("tab-content-id");
 
@@ -39,17 +64,15 @@ window.onresize = resizeRightSide;
 
 /*
     rightSide close
-*/
+    */
 
-$("#right-side-close").click(function () {
+$("#right-side-close").click(function() {
     if (rightSide.hasClass("open")) {
-        rightSide.animate({right:'-375px'}, 600, function () { rightSide.removeClass("open"); });
-    } else rightSide.animate({right:'0px'}, 600, function () { rightSide.addClass("open"); });
+        rightSide.animate({ right: '-375px' }, 600, function() { rightSide.removeClass("open"); });
+    } else rightSide.animate({ right: '0px' }, 600, function() { rightSide.addClass("open"); });
 });
 
-$("#tooltip-switch button").click(function () {
-    /* reverse locking status */
-
+$("#tooltip-switch button").click(function() {
     $("#tooltip-switch button").eq(0).toggleClass('tooltip-on tooltip-off btn-default btn-warning');
     $("#tooltip-switch button").eq(1).toggleClass('tooltip-on tooltip-off btn-warning btn-default');
 });
