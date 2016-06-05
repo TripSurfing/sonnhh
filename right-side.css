@@ -2,13 +2,14 @@
     position: absolute;
     bottom: 5px;
     right: 30%;
-    z-index:2;
+    z-index: 2;
 }
+
 .btn-confirm-cancel {
     position: absolute;
     bottom: 5px;
     left: 30%;
-    z-index:2;
+    z-index: 2;
 }
 
 .test {
@@ -18,6 +19,7 @@
     z-index: 1;
     position: absolute;
 }
+
 .test p {
     margin-top: 15px;
     color: white;
@@ -25,6 +27,7 @@
     text-align: center;
     font-weight: bold;
 }
+
 .delete-icon {
     position: absolute;
     right: 5px;
@@ -32,22 +35,30 @@
     width: 14px;
     height: 14px;
 }
+
 .delete-icon:hover {
     cursor: pointer;
 }
+
 
 /*
 * Media bootstrap
 *
 */
+
 #saved-places-id {
     overflow: auto;
     padding: 0;
 }
+
 .box-blur {
     -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -ms-filter: blur(1px);
+    -o-filter: blur(1px);
     filter: blur(1px);
 }
+
 .box {
     position: relative;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
@@ -58,9 +69,11 @@
     background-color: white;
     margin: 0 5px 10px 5px;
 }
+
 .box-full {
     height: auto;
 }
+
 .quote-content {
     margin: 10px 0 25px 7px;
     width: 318px;
@@ -70,14 +83,16 @@
     padding-top: 3px;
 }
 
-.quote-content-full{
+.quote-content-full {
     height: auto;
     overflow: visible;
 }
+
 .quote-content-short {
     height: 65px;
     overflow: hidden;
 }
+
 .quote-footer {
     position: absolute;
     height: 20px;
@@ -87,12 +102,14 @@
     margin: 0;
     left: 5px;
 }
+
 .saved-link-footer {
     height: 20px;
     font-style: italic;
     font-size: 13px;
     left: 5px;
 }
+
 .media-heading {
     margin-top: 5px;
 }
@@ -105,9 +122,11 @@
 
 
 /*}*/
+
 body {
     overflow-x: hidden;
 }
+
 .tab-pane {
     margin-top: 10px;
 }
@@ -136,7 +155,7 @@ body {
     overflow: auto;
     width: 370px;
     background-color: #F1F1EB;
-    border:0;
+    border: 0;
     margin-bottom: 10px;
     /*padding-bottom: 50px;*/
 }
@@ -243,14 +262,16 @@ input[type=submit] {
     font-weight: bold;
     border: 0;
 }
+
 #test {
     position: absolute;
     width: 50px;
     height: 50px;
     top: 0;
-    left:0;
+    left: 0;
     background-color: red;
 }
+
 #right-side-footer {
     height: 50px;
     width: 100%;
@@ -258,9 +279,11 @@ input[type=submit] {
     bottom: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.29);
 }
+
 #tooltip-switch {
     margin: 12px 85px 12px;
 }
+
 #tooltip-switch .btn {
     padding: 1px 12px;
 }
@@ -295,6 +318,7 @@ a.box-title:hover {
 .box-body {
     width: 230px;
 }
+
 
 /*::-webkit-scrollbar*/
 
@@ -333,7 +357,6 @@ a.box-title:hover {
 
 
 /*}*/
-
 
 .quote-see-more {
     position: absolute;
