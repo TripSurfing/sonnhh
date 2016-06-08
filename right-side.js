@@ -62,7 +62,7 @@ function resizeRightSide() {
     tabContent.style.height = (windowHeight - 240).toString() + "px";
 
 }
-window.onresize = resizeRightSide;
+// window.onresize = resizeRightSide;
 
 /*
     rightSide close
@@ -104,4 +104,10 @@ $("#ajax-btn").click(function() {
             console.log("complete");
         });
 
+});
+
+
+rightSide.on('click', '.my-dropdown-content a', function() {
+    var text = $(this).html();
+    $('.trip-name').text(text);
 });
