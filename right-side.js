@@ -75,6 +75,33 @@ $("#right-side-close").click(function() {
 });
 
 $("#tooltip-switch button").click(function() {
-    $("#tooltip-switch button").eq(0).toggleClass('tooltip-on tooltip-off btn-default btn-warning');
-    $("#tooltip-switch button").eq(1).toggleClass('tooltip-on tooltip-off btn-warning btn-default');
+    var button = $('#tooltip-switch button');
+    button.eq(0).toggleClass('tooltip-on tooltip-off btn-default btn-warning');
+    button.eq(1).toggleClass('tooltip-on tooltip-off btn-warning btn-default');
+});
+/*
+* Ajax template
+*/
+$("#ajax-btn").click(function() {
+    $.ajax({
+            url: 'http://www.tripsurfing.loc/api/ajax_son',
+            type: 'GET',
+            jsonpCallback: 'my_callback',
+            dataType: 'jsonp',
+            contentType: "application/json",
+            crossDomain: true,
+            data: {
+                term: "abc"
+            },
+        })
+        .done(function(res) {
+            console.log(res);
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        .always(function() {
+            console.log("complete");
+        });
+
 });

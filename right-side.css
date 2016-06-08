@@ -1,4 +1,5 @@
-.btn-confirm-delete, .btn-confirm-cancel {
+.btn-confirm-delete,
+.btn-confirm-cancel {
     position: absolute;
     bottom: 0px;
     right: 10%;
@@ -28,6 +29,7 @@
     font-weight: bold;
     z-index: 0;
 }
+
 .box-confirm-content {
     position: absolute;
     transform: translateX(-50%) translateY(-50%);
@@ -35,6 +37,7 @@
     top: 43%;
     height: 70px;
 }
+
 .delete-icon {
     position: absolute;
     right: 5px;
@@ -317,45 +320,6 @@ a.box-title:hover {
 .box-body {
     width: 230px;
 }
-
-
-/*::-webkit-scrollbar*/
-
-
-/*{*/
-
-
-/*width: 7px;  !* for vertical scrollbars *!*/
-
-
-/*height: 7px; !* for horizontal scrollbars *!*/
-
-
-/*}*/
-
-
-/*::-webkit-scrollbar-track*/
-
-
-/*{*/
-
-
-/*background: rgba(0, 0, 0, 0.1);*/
-
-
-/*}*/
-
-
-/*::-webkit-scrollbar-thumb*/
-
-
-/*{*/
-
-
-/*background: rgba(255, 185, 91, 0.71);*/
-
-
-/*}*/
 
 .quote-see-more {
     position: absolute;
