@@ -56,11 +56,6 @@
 *
 */
 
-#saved-places-id {
-    overflow: auto;
-    /* padding: 0; */
-}
-
 .box-blur {
     height: 100%;
     -webkit-filter: blur(1px);
@@ -120,14 +115,6 @@
 }
 
 
-/*.media:first-child {*/
-
-
-/*margin-top: 10px;*/
-
-
-/*}*/
-
 body {
     overflow-x: hidden;
     position: relative;
@@ -169,15 +156,18 @@ body {
     /* box-shadow: 0 0 5px 5px #888; */
     /*padding-bottom: 50px;*/
 }
-
+.tab-pane {
+    width: 100%;
+}
 
 #right-side {
     width: 372px;
-    min-height: 400px;
-    /* border: 1px solid black; */
+    height: 435px;
+    bottom: 70px;
     right: 15px;
-    position: absolute;
+    position: fixed;
     box-shadow: 0 0 5px;
+    display: none;
 }
 /* 
 #right-side-header {
@@ -306,23 +296,6 @@ a.box-title:hover {
     margin-top: 0;
 }
 
-/* 
-nav-tabs
- *//* 
-.nav-tabs {
-    background-color: transparent;
-}
-.nav-tabs > li > a {
-    border-radius: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-    margin-right: 5px;
-}
-.nav-tabs > li > a:hover{
-    color: orange;
-}*/
-
-
 
 /* Tab-pane */
 .tab-pane {
@@ -333,8 +306,8 @@ nav-tabs
 /* Trip name */
 .trip-name {
     position: absolute;
-    bottom: 0;
-    font-size: 25px;
+    bottom: 1px;
+    font-size: 23px;
 }
 
 
@@ -343,7 +316,7 @@ nav-tabs
     background-color: white;
     position: relative;
     height: 45px;
-    border-bottom: 1px ridge rgba(128, 128, 128, 0.5);
+    border-bottom: 1px ridge rgba(128, 128, 128, 0.3);
 }
 #nav-icon-group{
     position: absolute;
@@ -389,7 +362,7 @@ nav-tabs
 
 
 
-
+/* Dropdown trip */
 .my-dropdown {
     display: inline-block;
     position: relative;
@@ -411,8 +384,28 @@ nav-tabs
     padding: 8px 10px;
     text-decoration: none;
     display: block;
-    font-size: 20px;
+    font-size: 17px;
 }
 .my-dropdown:hover .my-dropdown-content {
     display: block;
+}
+/* tool button */
+
+#btn-tool-show {
+    opacity: 0.5;
+    z-index: 10;
+    border: 0;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 43px;
+    width: 43px;
+    border-radius: 50%;
+}
+#btn-tool-show:hover {
+    opacity: 1;
+}
+
+button:focus {
+    outline: none !important;
 }

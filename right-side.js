@@ -67,18 +67,26 @@ function resizeRightSide() {
 /*
     rightSide close
     */
-
-$("#right-side-close").click(function() {
-    if (rightSide.hasClass("open")) {
-        rightSide.animate({ right: '-375px' }, 600, function() { rightSide.removeClass("open"); });
-    } else rightSide.animate({ right: '0px' }, 600, function() { rightSide.addClass("open"); });
+// $('#btn-tool-show').click(function() {
+//     if (rightSide.hasClass('open'))
+//         rightSide.animate( { bottom: '-400px' }, 500);
+//     else rightSide.animate( { bottom: '70px' }, 500);
+    
+//     rightSide.toggleClass('open');
+// });
+$('#btn-tool-show').click(function() {
+    rightSide.slideToggle(700, function() {
+        $('#btn-tool-show span').toggleClass('glyphicon-triangle-top glyphicon-triangle-bottom');    
+    });
+    
 });
 
-$("#tooltip-switch button").click(function() {
-    var button = $('#tooltip-switch button');
-    button.eq(0).toggleClass('tooltip-on tooltip-off btn-default btn-warning');
-    button.eq(1).toggleClass('tooltip-on tooltip-off btn-warning btn-default');
-});
+// $("#btn-tool-show").click(function() {
+//     if (rightSide.hasClass("open")) {
+//         rightSide.animate({ right: '-375px' }, 600, function() { rightSide.removeClass("open"); });
+//     } else rightSide.animate({ right: '0px' }, 600, function() { rightSide.addClass("open"); });
+// });
+
 /*
 * Ajax template
 */
