@@ -1,6 +1,7 @@
 .glyphicon-remove:hover {
     color: #e78720;
 }
+
 .btn-confirm-delete,
 .btn-confirm-cancel {
     position: absolute;
@@ -70,7 +71,7 @@
 
 .box {
     position: relative;
-    height:  96px;
+    height: 96px;
     width: auto;
     border-radius: 0;
     overflow: hidden;
@@ -83,19 +84,27 @@
 .box-full {
     height: auto;
 }
+
 .box:hover .box-title {
     color: #ef7e05;
 }
+
+.box:hover .quote-content {
+    border-left: 5px solid #e78720;
+}
+
 .box:hover {
     border-bottom: 1px ridge #ef7e05;
 }
+
 .quote-content {
     width: auto;
     padding: 5px 15px 0px 8px;
     font-size: 13px;
-    border-left: 5px solid #f8720f;
+    font-style: italic;
+    color: black;
+    border-left: 5px solid rgba(255, 165, 0, 0.6);
     margin-bottom: 6px;
-
 }
 
 .quote-content-full {
@@ -107,8 +116,6 @@
     height: 60px;
     overflow: hidden;
 }
-
-
 
 .saved-link-footer {
     /* height: 20px; */
@@ -154,6 +161,7 @@ body {
     /* box-shadow: 0 0 5px 5px #888; */
     /*padding-bottom: 50px;*/
 }
+
 .tab-pane {
     width: 100%;
 }
@@ -249,30 +257,37 @@ a.box-title:hover {
     padding: 0 15px 0 0;
     height: auto;
 }
-.quote-source, 
+
+.quote-source,
 .quote-see-more {
     float: left;
     font-size: 12px;
     margin: 0;
 }
+
 .quote-see-more {
     float: right;
     padding: 0 15px 0 0;
 }
 
+
 /* Tab-pane */
+
 .tab-pane {
     margin-top: 0;
-/*    padding: 10px;*/
+    /*    padding: 10px;*/
 }
 
+
 /* Trip name */
+
 .trip-name {
     font-size: 20px;
 }
 
 
 /* right side nav tabs */
+
 #right-side-nav-tabs {
     background-color: #f8f8f8;
     position: relative;
@@ -281,53 +296,61 @@ a.box-title:hover {
     /* -moz-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
     -webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16); */
 }
-#nav-icon-group{
+
+#nav-icon-group {
     position: absolute;
     bottom: 0px;
     right: 5px;
 }
+
 .nav-tabs {
     border-bottom: 0;
 }
-.nav-tabs>li>a {
 
+.nav-tabs>li>a {
     font-size: 20px;
     color: gray;
     border-radius: 0;
 }
-#nav-icon-group > div {
+
+#nav-icon-group> div {
     text-align: center;
     display: inline-block;
     height: 35px;
     width: 35px;
 }
-#nav-icon-group > div.active {
+
+#nav-icon-group> div.active {
     background-color: #E78720;
 }
-#nav-icon-group > div.active >a> span {
+
+#nav-icon-group> div.active>a> span {
     color: white;
 }
-.nav>li>a {
 
+.nav>li>a {
     padding: 4px 11px;
-        width: auto;
+    width: auto;
     height: auto;
 }
-.nav-tabs >li.active > a, .nav-tabs>li.active>a:focus {
-        margin: 0 0 0 3px;  
+
+.nav-tabs>li.active> a,
+.nav-tabs>li.active>a:focus {
+    margin: 0 0 0 3px;
     background-color: #e78720;
-    border:0;
+    border: 0;
     color: white;
 }
+
 #right-side-nav-tabs>.glyphicon-list {
-        margin: 5px 5px 5px 10px;
+    margin: 5px 5px 5px 10px;
     font-size: 22px;
     color: #e78720;
 }
 
 
-
 /* Dropdown trip */
+
 .my-dropdown {
     display: inline-block;
     position: relative;
@@ -339,10 +362,13 @@ a.box-title:hover {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-.my-dropdown-content a:hover {background-color: #f1f1f1;}
+.my-dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
 .my-dropdown-content a {
     font-family: Arial;
     color: black;
@@ -351,13 +377,17 @@ a.box-title:hover {
     display: block;
     font-size: 17px;
 }
+
 .my-dropdown:hover .my-dropdown-content {
     display: block;
 }
+
+
 /* tool button */
 
 #btn-tool-show {
     opacity: 0.5;
+    /*background-color: red;*/
     z-index: 10;
     border: 0;
     position: fixed;
@@ -367,6 +397,7 @@ a.box-title:hover {
     width: 43px;
     border-radius: 50%;
 }
+
 #btn-tool-show:hover {
     opacity: 1;
 }

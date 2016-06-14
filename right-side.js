@@ -68,25 +68,100 @@ function resizeRightSide() {
 /*
     rightSide close
     */
-$('#btn-tool-show').click(function() {
+var load = function() {
     $.ajax({
-            type: 'GET',
-            url: 'http://www.tripsurfing.co/api/testRenderTrip',
-            data: {"tripId": 27},
-            jsonpCallback: 'my_callback',
-            dataType: 'jsonp',
-            contentType: "application/json",
-            crossDomain: true,
-        })
-        .done(function(res) {
-            console.log(res);
-        })
-        .fail(function() {
-            console.log("error");
-        })
-        .always(function() {
-            console.log("complete");
-        });
+        type: 'GET',
+        url: 'http://www.tripsurfing.co/api/testRenderTrip',
+        data: {"tripId": 72},
+        jsonpCallback: 'my_callback',
+        dataType: 'jsonp',
+        contentType: "application/json",
+        crossDomain: true,
+    })
+    .done(function(res) {
+        console.log(res);
+
+        updatePlace(res.place);
+        updateQuote(res.quote);
+        updateLink(res.link);
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
+}
+
+function updatePlace (placeList) {
+    for (let place of placeList) {
+        var item = '<div class="media box">\
+            <div class="box-container">\
+                <div class="media-left box-avatar-left">\
+                    <a href=' + place.url + ' target="_blank">\
+                        <img class="media-object saved-places-image" src="' + place.detail.url + '" alt="image">\
+                    </a>\
+                </div>\
+                <div class="media-body box-body">\
+                    <a href=' + place.url + ' class="box-title"  target="_blank">\
+                        <h4 class="media-heading title-wrap">' + place.name +
+                    
+                        '</h4>\
+                    </a>\
+                    <div class="box-body-content saved-places-content">' +
+                        place.address+
+                    '</div>\
+                </div>\
+            </div>\
+        </div>';
+        $("#saved-places-id").append(item);
+    }
+}
+function updateQuote (quoteList) {
+    for (let quote of quoteList) {
+        var item = '<div class = "quote box">\
+                        <div class="box-container">\
+                        <p class="quote-content quote-content-short">' +
+                            quote.content +
+                        '</p>\
+                        <a class="quote-source" target="_blank" href=' + quote.from_url + '>' +
+                            quote.from_url +
+                        '</a>\
+                        <a class="quote-see-more short-quote" href="#">See more</a>\
+                    </div>\
+                    </div>';
+        $("#saved-quote-id").append(item);
+    }
+}
+function updateLink (linkList) {
+    for (let link of linkList) {
+        var item = '<div class="media box">\
+            <div class="box-container">\
+                <div class="media-left box-avatar-left">\
+                    <a href=' + link.url + ' target="_blank">\
+                        <img class="media-object saved-link-image" src="' + link.image + '" alt="image">\
+                    </a>\
+                </div>\
+                <div class="media-body box-body">\
+                    <a href=' + link.url + ' class="box-title"  target="_blank">\
+                        <h4 class="media-heading title-wrap">' + link.title +
+                    
+                        '</h4>\
+                    </a>\
+                    <div class="box-body-content saved-link-desc">' +
+                        link.description+
+                    '</div>\
+                    <a class="saved-link-footer">'
+                        + link.canonicalUrl + '/...' +
+                    '</a>\
+                </div>\
+            </div>\
+        </div>';
+        $("#saved-links-id").append(item);
+    }
+}
+$('#btn-tool-show').click(function() {
+    load();
     rightSide.slideToggle(700, function() {
         $('#btn-tool-show span').toggleClass('glyphicon-triangle-top glyphicon-triangle-bottom');
     });
