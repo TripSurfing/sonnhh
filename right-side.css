@@ -20,7 +20,7 @@
 .box-confirm {
     height: 100%;
     width: 100%;
-    background-color: rgba(238, 238, 238, 0.9);
+    background-color: rgba(238, 238, 238, 0.85);
     z-index: 1;
     position: absolute;
 }
@@ -59,7 +59,7 @@
 
 .box {
     position: relative;
-    height: 96px;
+    height: 84px;
     width: auto;
     border-radius: 0;
     overflow: hidden;
@@ -112,10 +112,10 @@
 
 .link-bottom {
     position: absolute;
-    width: 100%;
-    bottom: 5px;
-    padding-right: 15px;
-    background-size: 20px !important;
+    width: 75%;
+    bottom: 4px;
+    /*padding-right: 15px;*/
+    background-size: 15px !important;
 }
 
 body {
@@ -130,8 +130,8 @@ body {
 
 .box-avatar-left {
     border: 0;
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     background-size: cover;
     background-position: center center;
     margin: 0;
@@ -141,8 +141,10 @@ body {
     font-size: 12px;
     font-style: italic;
     overflow: hidden;
-    height: 35px;
-    width: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 23px;
+    width: 278px;
 }
 
 .tab-content {
@@ -164,8 +166,8 @@ body {
 #right-side {
     width: 372px;
     height: 435px;
-    bottom: 0;
-    right: 0px;
+    bottom: 63px;
+    right: 0;
     position: fixed;
     box-shadow: 0 0px 20px rgba(0,0,0,0.25), 0 0px 7px rgba(0,0,0,0.22);
     display: none;
@@ -246,6 +248,7 @@ a.box-title:hover {
     width: 262px;
     overflow: hidden;
     margin-bottom: 4px;
+    font-size: 16px;
 }
 
 .box-body {
@@ -255,12 +258,15 @@ a.box-title:hover {
 .quote-source, .saved-link-footer{
     float: left;
     font-size: 12px;
-    margin-left: 25px;
-    width: 160px;
+    margin-left: 20px;
+    max-width: 160px;
+    width: auto;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     font-style: italic;
+    height: 30px;
+    padding: 8px 0;
 }
 
 .quote-see-more {
@@ -308,7 +314,8 @@ a.box-title:hover {
 }
 .icon-list {
     position: absolute;
-    left: 10px;
+    padding: 10px;
+    top: -2px;
     font-size: 28px;
     color: #e78720;
 
@@ -354,15 +361,19 @@ a.box-title:hover {
 
 .my-dropdown-content {
     display: none;
+    overflow: auto;
+    max-height: 390px;
     z-index: 3;
     position: absolute;
+    top: 47px;
+    left: 0;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .my-dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: rgba(243, 144, 17, 0.38);
 }
 
 .my-dropdown-content a {
@@ -371,12 +382,16 @@ a.box-title:hover {
     padding: 8px 10px;
     text-decoration: none;
     display: block;
-    font-size: 17px;
+    font-size: 16px;
 }
-
+.my-dropdown-content a:active {
+    background-color: rgba(243, 144, 17, 0.5);;
+}
 .icon-list:hover .my-dropdown-content {
     display: block;
 }
+
+
 
 
 /* tool button */
@@ -387,16 +402,27 @@ a.box-title:hover {
     z-index: 10;
     border: 0;
     position: fixed;
-    bottom: 20px;
+    bottom: 15px;
     right: 20px;
     height: 43px;
     width: 43px;
     border-radius: 50%;
 }
-
+#btn-tool-show img {
+    width: 35px;
+    height: 35px;
+    margin: 4px;
+}
+#btn-tool-show:hover img {
+    -ms-transform: rotate(-180deg); /* IE 9 */
+    -webkit-transform: rotate(-180deg); /* Chrome, Safari, Opera */
+    transform: rotate(-180deg);
+    transition: all 0.3s;
+}
 #btn-tool-show:hover {
     opacity: 1;
     transition: all 0.3s;
+    background-color: #eee;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
@@ -405,31 +431,62 @@ button:focus {
 }
 
 /*place bottom*/
-.place-bottom {
-    color: #999;
-}
-
 .rating {
     color: #e69000;
     font-weight: bold;
     display: inline-block;
     font-family: arial;
 }
-.bottom-btn {
+.bottom {
+    color: #999;
+}
+.delete-btn, .favorite-btn {
     display: inline-block;
     font-weight: bold;
     float: right;
     margin-right: 5px;
     margin-top:1px;
 }
-.icon-heart {
-    padding-left: 5px;
-    color: #999
+.favorite-not-active, .favorite-not-active:hover {
+    color: #999;
+}
+.favorite-active, .favorite-active:hover {
+    color: red;
+}
+.icon-heart:hover{
+    cursor: pointer;
+    padding: 1px;
+    font-size:20px;
+}
+.icon-trash, .icon-heart {
+    padding: 4px;
+    margin-left: 5px;
+}
+.icon-trash {
+    color: #999;
 }
 .icon-trash:hover {
     color: black;
     cursor: pointer;
+    padding: 1px;
+    font-size:20px;
 }
-.icon-heart:hover {
-    color: red
+.link-bottom .delete-btn {
+    margin-top: 6px;
+    margin-left:45px;
+}
+
+
+.no-more {
+    width: auto;
+    background-color: #f1ecec;
+}
+.no-more-content {
+    margin: auto;
+    font-weight: bold;
+    font-size: 18px;
+    flood-color: black;
+    text-align: center;
+    padding: 20px;
+    color: rgba(0, 0, 0, 0.25)
 }
