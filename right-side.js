@@ -169,27 +169,45 @@ var  updateLink = function(linkList) {
     }
     // if (linkList.length > 3) $("#saved-links-id").append(nomore);
 }
+var announceError = function(message) {
+    var error =  
+        '<div class="error">\
+            <div class="error-content"><h4>'+message+'</h4></div>\
+            <a href="http://tripsurfing.co/login" target="_blank">\
+                <button class="btn btn-warning">Log In</button>\
+            </a>\
+        </div>';
+    $("#saved-places-id").append(error);
+}
 
-function load() {
+function load(tripId) {
+    if (isNaN(tripId)) {
+        let defaultTrip = $(".default-trip")[0];
+        tripId = +defaultTrip.id;
+        $("#trip-name").text(defaultTrip.text);
+    }
     $.ajax({
         type: 'GET',
         url: 'http://www.tripsurfing.co/api/testRenderTrip',
-        data: {"tripId": 74},
+        data: {"tripId": tripId},
         jsonpCallback: 'my_callback',
         dataType: 'jsonp',
         contentType: "application/json",
         crossDomain: true,
 
-        success: function(res) {
-            updatePlace(res.place);
-            updateQuote(res.quote);
-            updateLink(res.link);
-            $('[data-toggle="tooltip"]').tooltip() 
-        },
-
-        error: function(res) {
-            console.log(res.messenger);
-        }
+    })
+    .done(function(res) {
+        switch(res.type) {
+            case "success":
+                updatePlace(res.place);
+                updateQuote(res.quote);
+                updateLink(res.link);
+                $('[data-toggle="tooltip"]').tooltip();
+                break;
+            case "error":
+                announceError(res.message);
+                break;
+        } 
     })
     .always(function(res) {
         console.log(res);
@@ -215,6 +233,9 @@ $('#btn-tool-show').click(function() {
 });
 
 rightSide.on('click', '.my-dropdown-content a', function() {
-    var text = $(this).html();
-    $('.trip-name').text(text);
+    let tripId = this.id;
+    let text = $(this).text();
+
+    clearWindow(function() {load(tripId);});
+    $('#trip-name').text(text);
 });
