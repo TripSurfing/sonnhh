@@ -3,69 +3,62 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap%203.3.6/css/bootstrap.min.css">
-    <!--<script src="bower_components/jquery/dist/jquery.min.map"></script>-->
-    <!-- Latest compiled and minified CSS -->
-    <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
-    <!-- jQuery library -->
+
     <script src="lib/jquery/jquery-1.12.4.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
-    <script src="lib/bootstrap%203.3.6/js/bootstrap.min.js"></script>
-    <!--<link rel="stylesheet" type="text/css" href="animate.css">-->
+    <!-- <script src="lib/jquery-ui.min.js"></script> -->
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="lib/tipsy/jquery.tipsy.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="lib/tipsy/tipsy.css">
     <link href="lib/entypo/entypo.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="right-side.css">
+    <link rel="stylesheet" type="text/css" href="right-side-2.css">
     <title>right side</title>
 </head>
 
 <body>
-    <div id="right-side">
-        <div id="right-side-nav-tabs">
-
+    <div id="right-side" class="ui-widget-content">
+        <div id="right-side-nav-tabs" class="ui-widget-header">
             <i class="icon-entypo icon-list">
                 <div class="my-dropdown-content">
-                    <a href="#" id="74">test</a>
-                    <a href="#" id="80" class="default-trip">Philippines 2</a>
-                    <a href="#" id="73">Philippines</a>
-                    <a href="#" id="72">Siquijor Island</a>
-                    <a href="#" id="27">First trip</a>
+                    <a href="javascript:void(0)" id="74">test</a>
+                    <a href="javascript:void(0)" id="80" class="default-trip">Philippines 2</a>
+                    <a href="javascript:void(0)" id="73">Philippines</a>
+                    <a href="javascript:void(0)" id="72">Siquijor Island</a>
+                    <a href="javascript:void(0)" id="27">First trip</a>
                 </div>
             </i>
-            <span id="trip-name"></span>
+            <div id="trip-name"></div>
+        </div>
 
-            <ul class="nav nav-tabs pull-right">
-                
-                <li class="active">
-                    <a data-toggle="tab" href="#saved-places-id">
-                        <i class="icon-entypo icon-location-pin" data-toggle="tooltip" data-placement="top" title="Places"></i>
+        <div id="ext-nav">
+            <ul>
+                <li>
+                    <a href="#link-tab">
+                        <i class="icon-entypo icon-link" title="Links" ext-data="tipsy"></i>
                     </a>
                 </li>
+
                 <li>
-                    <a data-toggle="tab" href="#saved-quote-id">
-                        <i class="icon-entypo icon-quote"></i>
-                    </a>
-                </li>
-                <li>
-                    <a data-toggle="tab" href=" #saved-links-id">
-                        <i class="icon-entypo icon-link" data-toggle="tooltip" data-placement="top" title="Links"></i>
+                    <a href="#place-tab">
+                        <i class="icon-entypo icon-location-pin" title="Places" ext-data="tipsy"></i>
                     </a>
                 </li>
             </ul>
-        </div>
-        <div class="tab-content" id="tab-content-id">
-            <div id="saved-places-id" class="tab-pane fade in active"> 
+
+            <div id="place-tab">
+                
             </div>
-            <div id="saved-quote-id" class="tab-pane fade">
-            </div>
-            <div id="saved-links-id" class="tab-pane fade">
+            <!--<div id="saved-quote-id" class="tab-pane fade">
+            </div>-->
+            <div id="link-tab">
+                
             </div>
         </div>
     </div>
     <div id='btn-tool-selector' class="btn-group">
         <div id="btn-tool-show" class="not-show">
-            <img src="image/LogoTruenogapv.png"/>
+            <img src="image/LogoTruenogapv.png" />
         </div>
-        
     </div>
     <!-- <button id="ajax-btn"> Ajax </button> -->
 </body>

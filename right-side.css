@@ -1,6 +1,3 @@
-.glyphicon-remove:hover {
-    color: #e78720;
-}
 
 .btn-confirm-delete,
 .btn-confirm-cancel {
@@ -64,7 +61,7 @@
     border-radius: 0;
     overflow: hidden;
     background-color: #fff;
-    margin: 0;
+    margin: 0 !important;
     
     border-bottom: 1px ridge rgba(128, 128, 128, 0.4);
 }
@@ -81,47 +78,20 @@
     color: #ef7e05;
 }
 
-.box:hover .quote-content {
-    transition: all 0.2s;
-    border-left: 5px solid #ef7e05;
-}
+
 
 .box:hover {
         transition: all 0.2s;
     border-bottom: 1px ridge #ef7e05;
 }
 
-.quote-content {
-    width: auto;
-    padding: 5px 15px 0px 8px;
-    font-size: 13px;
-    color: black;
-    border-left: 5px solid rgba(255, 165, 0, 0.6);
-    margin-bottom: 6px;
-}
-
-.quote-content-full {
-    height: auto;
-    overflow: visible;
-}
-
-.quote-content-short {
-    height: 60px;
-    overflow: hidden;
-}
 
 .link-bottom {
     position: absolute;
-    width: 75%;
+    width: 278px;
     bottom: 4px;
     /*padding-right: 15px;*/
     background-size: 15px !important;
-}
-
-body {
-    overflow-x: hidden;
-    position: relative;
-    font-family: Arial;
 }
 
 .tab-pane {
@@ -135,15 +105,17 @@ body {
     background-size: cover;
     background-position: center center;
     margin: 0;
+    padding: 0 !important;
 }
 
 .box-body-content {
     font-size: 12px;
+    line-height: 1.4;
     font-style: italic;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    height: 23px;
+    height: 22px;
     width: 278px;
 }
 
@@ -154,6 +126,7 @@ body {
     background-color: white;
     border: 0;
     margin-bottom: 10px;
+    position: absolute;
     /* box-shadow: 0 14px 18px -16px #9a9696 inset; */
     /* box-shadow: 0 0 5px 5px #888; */
     /*padding-bottom: 50px;*/
@@ -164,6 +137,7 @@ body {
 }
 
 #right-side {
+    z-index: 2305;
     width: 372px;
     height: 435px;
     bottom: 63px;
@@ -171,57 +145,7 @@ body {
     position: fixed;
     box-shadow: 0 0px 20px rgba(0,0,0,0.25), 0 0px 7px rgba(0,0,0,0.22);
     display: none;
-}
-
-#div-trip-select {
-    position: absolute;
-    top: 105px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 160px;
-}
-
-#selection-trip {
-    height: 26px;
-    width: 103px;
-    border-color: #de8700;
-}
-
-#open-button {
-    height: 26px;
-    border: 1px solid #B97306;
-    float: right;
-    background-color: #de8700;
-}
-
-#open-button.btn-sm {
-    padding: 5px 9px;
-    font-size: 13px;
-    line-height: 0.5;
-    border-radius: 0;
-}
-
-input[type=submit] {
-    background-color: #e69000;
-    color: white;
-    border: 1px solid #de8700;
-    height: 26px;
-}
-
-#right-side-footer {
-    height: 50px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.29);
-}
-
-#tooltip-switch {
-    margin: 12px 85px 12px;
-}
-
-#tooltip-switch .btn {
-    padding: 1px 12px;
+    font-family: Arial !important;
 }
 
 a.box-title:link {
@@ -242,20 +166,22 @@ a.box-title:hover {
     text-decoration: none;
 }
 
-.title-wrap {
+.ext-title-wrap {
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 262px;
     overflow: hidden;
     margin-bottom: 4px;
     font-size: 16px;
+    font-family: Arial !important;
 }
 
 .box-body {
     width: auto;
     height: auto;
 }
-.quote-source, .saved-link-footer{
+.saved-link-footer{
+    line-height: 1.4 !important;
     float: left;
     font-size: 12px;
     margin-left: 20px;
@@ -267,23 +193,7 @@ a.box-title:hover {
     font-style: italic;
     height: 30px;
     padding: 8px 0;
-}
-
-.quote-see-more {
-    float: right;
-    font-size: 12px;
-    padding: 0 15px 0 0;
-}
-.quote-bottom {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    padding-right: 15px;
-    background-size: 20px !important;
-}
-.quote-bottom a {
-    /*color: #e69000;*/
-
+    color: blue !important;
 }
 
 /* Tab-pane */
@@ -313,38 +223,39 @@ a.box-title:hover {
     -webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16); */
 }
 .icon-list {
-    position: absolute;
-    padding: 10px;
-    top: -2px;
-    font-size: 28px;
-    color: #e78720;
+    position: absolute !important;
+    padding: 10px !important;
+    top: -2px !important;
+    font-size: 28px !important;
+    color: #e78720 !important;
 
 }
 
-.nav-tabs {
-    border-bottom: 0;
-    margin-top:-4px;
+.nav-tabs.ext-nav {
+    border-bottom: 0 !important;
+    margin-top:-4px !important;
 }
 
-.nav-tabs>li>a {
-    font-size: 20px;
-    color: gray;
-    border-radius: 0;
-    margin: 0;
+.ext-nav.nav-tabs>li>a {
+    font-size: 20px !important;
+    color: gray !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    line-height: 1 !important;;
 }
-.nav>li>a {
-    padding: 4px 11px;
-    width: auto;
-    height: auto;
-}
-
-.nav>li>a:hover {
-    background: transparent;
-    border-color: transparent;
+.ext-nav.nav>li>a {
+    padding: 4px 11px !important;
+    width: auto !important;
+    height: auto !important;
 }
 
-.nav-tabs>li.active> a,
-.nav-tabs>li.active>a:focus {
+.ext-nav.nav>li>a:hover {
+    background: transparent !important;
+    border-color: transparent !important;
+}
+
+.ext-nav.nav-tabs>li.active> a,
+.ext-nav.nav-tabs>li.active>a:focus {
     margin: 0 !important;
     background-color: transparent !important;
     border-color: transparent !important;
@@ -352,7 +263,9 @@ a.box-title:hover {
     /*font-size: 25px;*/
 }
 
-
+.icon-location-pin, .icon-link {
+    font-size: 20px !important;
+}
 /* Dropdown trip */
 
 .my-dropdown {
@@ -377,12 +290,12 @@ a.box-title:hover {
 }
 
 .my-dropdown-content a {
-    font-family: Arial;
-    color: black;
+    font-family: Arial !important;;
+    color: black !important;;
     padding: 8px 10px;
-    text-decoration: none;
+    text-decoration: none !important;;
     display: block;
-    font-size: 16px;
+    font-size: 16px !important;;
 }
 .my-dropdown-content a:active {
     background-color: rgba(243, 144, 17, 0.5);;
@@ -444,7 +357,7 @@ button:focus {
     display: inline-block;
     font-weight: bold;
     float: right;
-    margin-right: 5px;
+    
     margin-top:1px;
 }
 .favorite-not-active, .favorite-not-active:hover {
@@ -454,13 +367,13 @@ button:focus {
     color: red;
 }
 .icon-heart:hover{
-    cursor: pointer;
-    padding: 1px;
-    font-size:20px;
+    cursor: pointer !important;
+    padding: 1px !important;
+    font-size:20px !important;
 }
 .icon-trash, .icon-heart {
-    padding: 4px;
-    margin-left: 5px;
+    padding: 4px !important;
+    margin-left: 5px !important;
 }
 .icon-trash {
     color: #999;
